@@ -242,7 +242,7 @@ return [
             'text' => 'search',
         ],
         [
-            'text' => 'To Do's,
+            'text' => 'To Do's',
             'url'  => 'todos',
             'icon' => 'fas fa-fw fa-file',
         ],
