@@ -48,4 +48,7 @@ URL::forceScheme('https');
 
 Route::fallback(function () {
     //
+    Route::get('/', function () {
+    return view('welcome');
+});
 });
