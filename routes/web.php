@@ -20,8 +20,8 @@ Route::get('/todos', function () {
     return view('todos');
 });
 
-Route::get('/calendar', function () {
-    return view('calendar');
+Route::get('/calender', function () {
+    return view('calender');
 });
 
 Route::get('/board', function () {
@@ -29,7 +29,7 @@ Route::get('/board', function () {
 });
 
 Route::get('events-feed/', function(){
-    return '[
+    return'[
         {
           "title": "CSE4500 Class",
           "start": "2022-02-23T17:30:00",
