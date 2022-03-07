@@ -48,6 +48,5 @@ URL::forceScheme('https');
 
 Route::fallback(function () {
     //
-    return \Response::view('errors.404');
 
 });
