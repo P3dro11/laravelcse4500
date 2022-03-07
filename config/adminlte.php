@@ -227,23 +227,36 @@ return [
     'menu' => [
         // Navbar items:
         [
-        [
-        'type' => 'sidebar-menu-search',
-        'text' => 'search',
-        ],     
-        [
-        'text' => 'To Do\'s',
-        'url'  => 'todos',
-        'icon' => 'fas fa-fw fa-file',
+            'type'         => 'navbar-search',
+            'text'         => 'search',
+            'topnav_right' => true,
         ],
-        [         
-        'text' => 'Calendar',
-        'url'  => 'calendar',
-        'icon' => 'fas fa-fw fa-calendar-alt',
-            ],
+        [
+            'type'         => 'fullscreen-widget',
+            'topnav_right' => true,
         ],
+
         // Sidebar items:
-     
+        [
+            'type' => 'sidebar-menu-search',
+            'text' => 'search',
+        ],
+        [
+            'text' => 'To Do's',
+            'url'  => 'todos',
+            'icon' => 'fas fa-fw fa-file',
+        ],
+        [
+            'text' => 'Calendar',
+            'url'  => 'calendar',
+            'icon' => 'fas fa-fw fa-calendar-alt',
+        ],
+        [
+            'text' => 'Board',
+            'url'  => 'board',
+            'icon' => 'fas fa-fw fa-columns',
+        ],
+    ],
 
     /*
     |--------------------------------------------------------------------------
