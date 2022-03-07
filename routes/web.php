@@ -20,8 +20,8 @@ Route::get('/todos', function () {
     return view('todos');
 });
 
-Route::get('/calender', function () {
-    return view('calender');
+Route::get('/calendar', function () {
+    return view('calendar');
 });
 
 Route::get('/board', function () {
