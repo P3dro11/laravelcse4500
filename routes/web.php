@@ -46,11 +46,6 @@ Route::get('events-feed/', function(){
 URL::forceScheme('https');
 
 
-Route::fallback(function () {
-    //
-    return view('404page');
-});
-
 /* Connect to your database */
 
 Route::get('/db-test', function () {
@@ -59,4 +54,9 @@ Route::get('/db-test', function () {
     } catch (\Exception $e) {
           echo 'None';
     }
+});
+
+Route::fallback(function () {
+    //
+    return view('404page');
 });
