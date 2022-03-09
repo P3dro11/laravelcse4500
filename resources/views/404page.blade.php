@@ -8,6 +8,14 @@
 
 @section('content')
 
+@section('css')
+    <link rel="stylesheet" href="/css/admin_custom.css">
+@stop
+
+@section('js')
+    <script> console.log('Hi!'); </script>
+@stop
+
 <div class="content-header">
             <div class="container-fluid">
                     <h1>Error</h1>
