@@ -48,7 +48,7 @@ URL::forceScheme('https');
 
 Route::fallback(function () {
     //
-
+    return view('404page');
 });
 
 /* Connect to your database */
