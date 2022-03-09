@@ -43,7 +43,6 @@ Route::get('events-feed/', function(){
       ]';
 });
 
-URL::forceScheme('https');
 
 
 Route::fallback(function () {
