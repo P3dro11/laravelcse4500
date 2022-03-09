@@ -56,7 +56,7 @@ Route::get('/db-test', function () {
     }
 });
 
-Route::fallback(function () {
+Route::fallback('/',function () {
     //
     return view('404page');
 });
