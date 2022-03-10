@@ -3,27 +3,15 @@
 @section('title', '404page')
 
 @section('content_header')
-    <h1>404page</h1>
-@stop
-
-@section('content')
-
-@section('css')
-    <link rel="stylesheet" href="/css/admin_custom.css">
-@stop
-
-@section('js')
-    <script> console.log('Hi!'); </script>
-@stop
-
 <div class="content-header">
             <div class="container-fluid">
                     <h1>Error</h1>
             </div>
         </div>
+@stop
 
-
-    <div class="content">
+@section('content')
+<div class="content">
         <div class="container-fluid">
             <div class="error-page">
 <h2 class="headline text-warning"> 404</h2>
@@ -48,3 +36,8 @@ Meanwhile, you may <a href="/">return to dashboard</a> or try using the search f
 </div>
         </div>
     </div>
+@stop
+
+@section('js')
+<script src="//cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+@stop
