@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -47,10 +48,6 @@ Route::get('events-feed/', function(){
 URL::forceScheme('https');
 
 
-Route::fallback(function () {
-    //
-    return view('404page');
-});
 
 /* Connect to your database */
 
@@ -67,6 +64,10 @@ Route::get('/db-migrate', function () {
     Artisan::call('migrate');
     echo Artisan::output();
 });
+
+Route::resource('/todos', TodoController::class);
+
+
 
 Route::fallback(function () {
     //
