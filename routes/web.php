@@ -22,11 +22,13 @@ Route::get('/', function () {
 Route::get('/todos', function () {
     return view('todos');
 });
+
 Route::resource('/todos', TodoController::class);
 
 Route::get('/calendar', function () {
     return view('calendar');
 });
+
 Route::resource('/events', EventController::class);
 
 Route::get('/board', function () {
