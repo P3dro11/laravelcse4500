@@ -3,63 +3,58 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Calendar;
+use App\Models\Event;
 
-class calendarController extends Controller
+class EventController extends Controller
 {
-
     public function index()
     {
-        $events = Event::select('title', 'startTime AS start', 'endTime AS end')->get();
-        return json_encode( compact('events')['events'] );
+        $events = Event::select('title', 'begin AS start', 'finish AS end')->get();
+        return json_encode( compact('events')['events']);
     }
-
 
     public function create()
     {
         return view('events.create');
     }
 
-
     public function store(Request $request)
     {
         $validated = $request->validate([
-             'title' => 'required',
-             'startTime' => 'required',
-             'endTime' => 'required',
-
+            'title' => 'required',
+            'begin' => 'required',
+            'finish' => 'required',
         ]);
 
-        $calendar = calendar::create([
-             'title' => $request->title,
-             'startTime' => date($request->starttime),
-             'endTime' => data($request->endtime)
+        $events = Event::create([
+            'title' => $request->title,
+            'begin' => date($request->begin),
+            'finish' => date($request->finish),
         ]);
 
-        return redirect('/calendar')
+        return redirect('/calendar');
+
     }
 
     public function show($id)
     {
-        $Calendar= Calendar::find($id);
-        return view('calendars.show',compact('calendars'));
+        $events= Event::find($id);
+        return view('events.show',compact('event'));
     }
-
 
     public function edit($id)
     {
-        //
+
     }
 
-
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
-        //
-    }
 
+    }
 
     public function destroy($id)
     {
-        //
+
     }
+
 }
