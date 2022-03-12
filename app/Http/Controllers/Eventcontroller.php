@@ -11,8 +11,8 @@ class EventController extends Controller
     {
         $events = Event::select('title', 'begin AS start', 'finish AS end')->get();
         return json_encode( compact('events')['events']);
-    }
-
+    }   
+    
     public function create()
     {
         return view('events.create');
@@ -33,7 +33,7 @@ class EventController extends Controller
         ]);
 
         return redirect('/calendar');
-
+ 
     }
 
     public function show($id)
