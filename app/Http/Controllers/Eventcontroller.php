@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Calendar;
 
-class TodoController extends Controller
+class calendarController extends Controller
 {
 
     public function index()
@@ -30,7 +30,7 @@ class TodoController extends Controller
 
         ]);
 
-        $todo = Todo::create([
+        $calendar = calendar::create([
              'title' => $request->title,
              'startTime' => date($request->starttime),
              'endTime' => data($request->endtime)
@@ -41,7 +41,7 @@ class TodoController extends Controller
 
     public function show($id)
     {
-        $todo= Calendar::find($id);
+        $Calendar= Calendar::find($id);
         return view('calendars.show',compact('calendars'));
     }
 
