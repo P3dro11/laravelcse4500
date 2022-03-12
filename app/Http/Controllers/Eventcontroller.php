@@ -25,15 +25,15 @@ class TodoController extends Controller
     {
         $validated = $request->validate([
              'title' => 'required',
-             'starttime' => 'required',
-             'endtime' => 'required',
+             'startTime' => 'required',
+             'endTime' => 'required',
 
         ]);
 
         $todo = Todo::create([
              'title' => $request->title,
              'startTime' => date($request->starttime),
-             'endtime' => data($request->endtime)
+             'endTime' => data($request->endtime)
         ]);
 
         return redirect('/calendar')
